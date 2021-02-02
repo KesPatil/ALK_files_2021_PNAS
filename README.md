@@ -1,6 +1,7 @@
 # ALK_files_2021_PNAS
 
-# README: supporting data for 2021 manuscript PNAS Patil et. al.
+
+README: supporting data for 2021 manuscript PNAS Patil et. al.
 
 ## Folders
 
