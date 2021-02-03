@@ -1,1 +1,40 @@
 
+#use units of  angstrom, kcal/moll
+UNITS LENGTH=A ENERGY=kcal/mol
+MOLINFO STRUCTURE=active_alk_wt_protein.pdb
+WHOLEMOLECULES RESIDUES=all MOLTYPE=protein
+
+#RMSD to inactive structure alpha C helix and activation loop
+RMSD REFERENCE=alk_inactive_CA.pdb TYPE=OPTIMAL LABEL=inactive_rmsd
+
+#RMSD to active structure alpha C helix and activation loop
+RMSD REFERENCE=alk_active_CA.pdb TYPE=OPTIMAL LABEL=active_rmsd
+
+
+
+
+#COMBINE LABEL=rmsd_sum_alphaChelix ARG=inactive_rmsd,active_rmsd COEFFICIENTS=1,1 PERIODIC=NO
+
+COMBINE LABEL=rmsd_sum ARG=inactive_rmsd,active_rmsd COEFFICIENTS=1,1 PERIODIC=NO
+
+UPPER_WALLS ARG=rmsd_sum,active_rmsd,inactive_rmsd   AT=12,5.5,5.5 KAPPA=500,500,500
+
+
+METAD ...
+ARG=active_rmsd,inactive_rmsd
+SIGMA=0.05,0.05
+HEIGHT=0.6
+PACE=500
+LABEL=meta
+TEMP=300
+BIASFACTOR=20
+GRID_MIN=-1,-1
+GRID_MAX=8,8
+WALKERS_N=4
+WALKERS_ID=0
+WALKERS_DIR=../
+WALKERS_RSTRIDE=500
+... METAD
+FLUSH STRIDE=500
+ENERGY LABEL=energy
+PRINT ARG=* STRIDE=500 FILE=COLVARS
