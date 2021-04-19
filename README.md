@@ -3,24 +3,24 @@
 
 README: supporting data for 2021 manuscript PNAS Patil et. al. There are there folders F_unbiased that includes the files to perform Unbiased Molecular Dynamics, F_metad contains files to perform metadynamics, F_post_processing contains files to perform post processing <br />
 
-### Folders
+## Folders
 
 F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics <br />
 F_metad: This folder has the input scripts required to perform Metadynamics <br />
 F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, check convergence of metadynamics free energy zones and to extract structures from those  zones </br> 
 
-### Forcefield implemented
+## Forcefield implemented
 Our MD and metadynamics simulations use charmm27.ff from GROMACS 5.0.7
 
-### Procedure
-## 1. MD simulation in Biophyscode <br />
+## Procedure
+### 1. MD simulation in Biophyscode <br />
 
 md: 101ns production run in Biophyscode that wraps GROMACS 4.6 for H-bond occupancy calculations <br />
 
 
 
 
-## 2. Enhanced sampling simulation of Metadynamics using PLUMED <br />
+### 2. Enhanced sampling simulation of Metadynamics using PLUMED <br />
 
 plumed.dat metadynamics script run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics<br />
 https://sites.google.com/site/plumedweb/home <br />
@@ -28,13 +28,13 @@ https://sites.google.com/site/plumedweb/home <br />
 
 metad: Aggregate 2.6us metadynamics run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics until the convergence criterion is met for the zones of interest<br />
 
-## 3. Description of the post-processing codes <br />
+### 3. Description of the post-processing codes <br />
 
 Analysis of the trajectories was done using python and mostly MDanalysis package in python: https://www.mdanalysis.org  <br />
 
 
 
-### Citations
+## Citations
 If you have any suggestions or queries please feel free to reach out at : patilk@seas.upenn.edu  <br />
 If you found the above scripts and/or codes helpful, please cite: <br />
 1. Jordan, E. Joseph, et al. "Computational algorithms for in silico profiling of activating mutations in cancer." Cellular and Molecular Life Sciences 76.14 (2019): 2663-2679.
