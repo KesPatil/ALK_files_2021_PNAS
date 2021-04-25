@@ -39,7 +39,7 @@ We patch GROMACS 5.0.7 with PLUMED 2.3.5 and use multiple walker (num_of_walkers
 In the folder F_metad we have the scripts required to run the metadynamics. Please note: Metadynamics has to be run using the output .gro and .cpt files of the unbiased MD  simulations. The folder containts the .mdp file, plumed.dat, topol.top, and .itp files <br />
 plumed.dat metadynamics script run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics. We set in the PLUMED script, the energy in kcal/mol and length in Å. The parameters used in this study to perform Well-Tempered multiple walker metadynamics (WTMD) are:bias factor γ = T +∆T/T = 20, height = 0.6 and pace = 500. <br />
 https://sites.google.com/site/plumedweb/home <br />
-
+</p>
 
 
 Aggregate of 2.6us metadynamics run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics until the convergence criterion is met for the zones of interest (See section C1 in the SI of  Patil et. al. PNAS 2021<br />
@@ -47,7 +47,8 @@ Aggregate of 2.6us metadynamics run in GROMACS 5.0.7 patched with PLUMED 2.3.5 u
 The output of the metadynamics run are the HILLS files. We will have four of them since we used four walkers. To get the free energy file from the HILLS use <div class="text-white bg-blue mb-2">
   .sum_hills
 </div> sum_hills action of PLUMED (https://www.plumed.org/doc-v2.5/user-doc/html/sum_hills.html) <br />
-</p>
+
+
 ### 3. Description of the post-processing codes <br />
 
 Analysis of the trajectories was done using python and mostly MDanalysis package in python: https://www.mdanalysis.org  <br />
