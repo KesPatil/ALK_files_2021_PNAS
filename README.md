@@ -45,9 +45,7 @@ https://sites.google.com/site/plumedweb/home <br />
 
 Aggregate of 2.6us metadynamics run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics until the convergence criterion is met for the zones of interest (See section C1 in the SI of  Patil et. al. PNAS 2021<br />
 
-The output of the metadynamics run are the HILLS files. We will have four of them since we used four walkers. To get the free energy file from the HILLS use <div class="text-white bg-blue mb-2">
-  .sum_hills
-</div> sum_hills action of PLUMED (https://www.plumed.org/doc-v2.5/user-doc/html/sum_hills.html) <br />
+The output of the metadynamics run are the HILLS files. We will have four of them since we used four walkers. To get the free energy file from the HILLS use \textbf{plumed sum_hills} action of PLUMED (https://www.plumed.org/doc-v2.5/user-doc/html/sum_hills.html) <br />
 
 
 ### 3. Description of the post-processing codes <br />
