@@ -5,7 +5,7 @@
 README: supporting data for 2021 manuscript PNAS Patil et. al. There are three folders F_unbiased that includes the files to perform Unbiased Molecular Dynamics, F_metad contains files to perform metadynamics, F_post_processing contains files to perform post processing <br />
 </p>
 ## Folders
-
+<p align="justified">
 F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics <br />
 1. 
 F_metad: This folder has the input scripts required to perform Metadynamics <br />
@@ -13,15 +13,16 @@ F_metad: This folder has the input scripts required to perform Metadynamics <br 
 
 F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, check convergence of metadynamics free energy zones and to extract structures from those  zones </br> 
 1.
-
+</p>
 ## Forcefield implemented
+
 Our MD and metadynamics simulations use charmm27.ff from GROMACS 5.0.7
 
 ## Procedure
 ### 1. MD simulation in GROMACS <br />
-
+<p align="justified">
 The MD simulations are performed in GROMACS. The paper mentions Biophyscode which actually is a wrapper on Gromacs. Please feel free to try out Biophyscode, a creation from Radhakrishnan lab. https://biophyscode.github.io. Please note: Following is the walk-through on how to introduce mutations in protein and run a simulation using Biophyscode:
-
+</p>
 "https://biophyscode.github.io/molecular_dynamics_lab/"
 
 
@@ -34,11 +35,11 @@ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 
 We patch GROMACS 5.0.7 with PLUMED 2.3.5 and use multiple walker (num_of_walkers=4) metadynamics. For installation procedure of PLUMED and the subsequent patching with GROMACS, see here: https://www.plumed.org/doc-v2.6/user-doc/html/_installation.html <br />
  
-
+<p align="justified">
 In the folder F_metad we have the scripts required to run the metadynamics. Please note: Metadynamics has to be run using the output .gro and .cpt files of the unbiased MD  simulations. The folder containts the .mdp file, plumed.dat, topol.top, and .itp files <br />
 plumed.dat metadynamics script run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics. We set in the PLUMED script, the energy in kcal/mol and length in Å. The parameters used in this study to perform Well-Tempered multiple walker metadynamics (WTMD) are:bias factor γ = T +∆T/T = 20, height = 0.6 and pace = 500. <br />
 https://sites.google.com/site/plumedweb/home <br />
-
+</p>
 
 Aggregate of 2.6us metadynamics run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics until the convergence criterion is met for the zones of interest (See section C1 in the SI of  Patil et. al. PNAS 2021<br />
 
