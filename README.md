@@ -1,11 +1,11 @@
 
 # ALK_files_2021_PNAS
 
-<p align="justified">
+<p align="justify">
 README: supporting data for 2021 manuscript PNAS Patil et. al. There are three folders F_unbiased that includes the files to perform Unbiased Molecular Dynamics, F_metad contains files to perform metadynamics, F_post_processing contains files to perform post processing <br />
 </p>
 ## Folders
-<p align="justified">
+<p align="justify">
 F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics <br />
 1. 
 F_metad: This folder has the input scripts required to perform Metadynamics <br />
@@ -20,7 +20,7 @@ Our MD and metadynamics simulations use charmm27.ff from GROMACS 5.0.7
 
 ## Procedure
 ### 1. MD simulation in GROMACS <br />
-<p align="justified">
+<p align="justify">
 The MD simulations are performed in GROMACS. The paper mentions Biophyscode which actually is a wrapper on Gromacs. Please feel free to try out Biophyscode, a creation from Radhakrishnan lab. https://biophyscode.github.io. Please note: Following is the walk-through on how to introduce mutations in protein and run a simulation using Biophyscode:
 </p>
 "https://biophyscode.github.io/molecular_dynamics_lab/"
