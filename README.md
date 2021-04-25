@@ -49,7 +49,7 @@ Analysis of the trajectories was done using python and mostly MDanalysis package
  The folder F_post_processing contains three codes: <br />
  
  1. Free_energy_convergence.ipynb is the code to plot the free energy landscapes using fes.dat file and also to give the free energy estimate of the zone of interest using the equation 4 under section C1 in SI. <br />
- 2. hbonds.py is the code that takes in trajectory files from the zones as input and outputs things required for the next code (to reproduce plots in Fig 3A and 3B in main text)  <br />
+ 2. hbonds.py is the code that takes in trajectory files from the zones as input and outputs things required for the next code - plot_zone.py (to reproduce plots in Fig 3A and 3B in main text)  <br />
  3. plot_zone.py takes in the output from hbonds.py and reproduces the plots in Fig 3A and 3B in main text)  <br />
 
 ## Citations
