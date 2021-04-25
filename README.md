@@ -23,7 +23,7 @@ Our MD and metadynamics simulations use charmm27.ff from GROMACS 5.0.7
 ## Procedure
 ### 1. MD simulation in GROMACS <br />
 <p align="justify">
-The MD simulations are performed in GROMACS. The paper mentions Biophyscode which actually is a wrapper on Gromacs. Please feel free to try out Biophyscode, a creation from Radhakrishnan lab. https://biophyscode.github.io. Please note: Following is the walk-through on how to introduce mutations in protein and run a simulation using Biophyscode:
+The MD simulations are performed in GROMACS. The paper mentions Biophyscode which actually is a wrapper on Gromacs. Please feel free to try out Biophyscode, a creation from Radhakrishnan lab. https://biophyscode.github.io. Please note: Following is the walk-through on how to  run a simulation using Biophyscode:
 
 "https://biophyscode.github.io/molecular_dynamics_lab/"
 
