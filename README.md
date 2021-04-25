@@ -32,7 +32,7 @@ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 
 
 ### 2. Enhanced sampling simulation of Metadynamics using PLUMED <br />
-
+<p align="justify">
 We patch GROMACS 5.0.7 with PLUMED 2.3.5 and use multiple walker (num_of_walkers=4) metadynamics. For installation procedure of PLUMED and the subsequent patching with GROMACS, see here: https://www.plumed.org/doc-v2.6/user-doc/html/_installation.html <br />
 
 
@@ -47,7 +47,7 @@ Aggregate of 2.6us metadynamics run in GROMACS 5.0.7 patched with PLUMED 2.3.5 u
 The output of the metadynamics run are the HILLS files. We will have four of them since we used four walkers. To get the free energy file from the HILLS use <div class="text-white bg-blue mb-2">
   .sum_hills
 </div> sum_hills action of PLUMED (https://www.plumed.org/doc-v2.5/user-doc/html/sum_hills.html) <br />
-
+</p>
 ### 3. Description of the post-processing codes <br />
 
 Analysis of the trajectories was done using python and mostly MDanalysis package in python: https://www.mdanalysis.org  <br />
