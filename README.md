@@ -1,8 +1,9 @@
+
 # ALK_files_2021_PNAS
 
-
+<p align="center">
 README: supporting data for 2021 manuscript PNAS Patil et. al. There are three folders F_unbiased that includes the files to perform Unbiased Molecular Dynamics, F_metad contains files to perform metadynamics, F_post_processing contains files to perform post processing <br />
-
+</p>
 ## Folders
 
 F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics <br />
