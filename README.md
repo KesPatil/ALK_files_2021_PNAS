@@ -11,7 +11,7 @@ F_unbiased: This folder has the input scripts required to perform Unbiased Molec
 F_metad: This folder has the input scripts required to perform Metadynamics <br />
 1. 
 
-F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, check convergence of metadynamics free energy zones and to extract structures from those  zones </br> 
+F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, and check convergence of metadynamics free energy zones  </br> 
 1.
 
 ## Forcefield implemented
