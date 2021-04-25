@@ -36,7 +36,9 @@ gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 We patch GROMACS 5.0.7 with PLUMED 2.3.5 and use multiple walker (num_of_walkers=4) metadynamics. For installation procedure of PLUMED and the subsequent patching with GROMACS, see here: https://www.plumed.org/doc-v2.6/user-doc/html/_installation.html <br />
 </p>
 
+<p align="justify">
 In the folder F_metad we have the scripts required to run the metadynamics. Please note: Metadynamics has to be run using the output .gro and .cpt files of the unbiased MD  simulations. The folder containts the .mdp file, plumed.dat, topol.top, and .itp files <br />
+</p>
 
 <p align="justify">
 plumed.dat metadynamics script run in GROMACS 5.0.7 patched with PLUMED 2.3.5 using multiple walker (num_of_walkers=4) metadynamics. We set in the PLUMED script, the energy in kcal/mol and length in Å. The parameters used in this study to perform Well-Tempered multiple walker metadynamics (WTMD) are:bias factor γ = T +∆T/T = 20, height = 0.6 and pace = 500. <br />
