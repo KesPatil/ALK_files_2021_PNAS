@@ -3,9 +3,10 @@
 
 <p align="justify">
 README: supporting data for 2021 manuscript PNAS Patil et. al. There are three folders F_unbiased that includes the files to perform Unbiased Molecular Dynamics, F_metad contains files to perform metadynamics, F_post_processing contains files to perform post processing <br />
+</p>
 
 ## Folders
-
+<p align="justify">
 F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics <br />
 1. 
 F_metad: This folder has the input scripts required to perform Metadynamics <br />
@@ -13,23 +14,23 @@ F_metad: This folder has the input scripts required to perform Metadynamics <br 
 
 F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, and check convergence of metadynamics free energy zones  </br> 
 1.
-
+</p>
 ## Forcefield implemented
 
 Our MD and metadynamics simulations use charmm27.ff from GROMACS 5.0.7
 
 ## Procedure
 ### 1. MD simulation in GROMACS <br />
-
+<p align="justify">
 The MD simulations are performed in GROMACS. The paper mentions Biophyscode which actually is a wrapper on Gromacs. Please feel free to try out Biophyscode, a creation from Radhakrishnan lab. https://biophyscode.github.io. Please note: Following is the walk-through on how to introduce mutations in protein and run a simulation using Biophyscode:
 
 "https://biophyscode.github.io/molecular_dynamics_lab/"
 
 
-All the requisite files needed to run the simulations are  included in the F_unbiased. Submit the job to run the MD using the command <br />
+All the requisite files needed to run the simulations are  included in the F_unbiased. Submit the job to run the MD using the command: <br />
 
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
-
+</p>
 
 ### 2. Enhanced sampling simulation of Metadynamics using PLUMED <br />
 <p align="justify">
