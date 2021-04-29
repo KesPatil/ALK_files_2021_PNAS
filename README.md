@@ -7,7 +7,7 @@ README: supporting data for 2021 manuscript PNAS Patil et. al. There are three f
 
 ## Folders
 <p align="justify">
-F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics <br />
+F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics. Please give few days. The external drive that has files is in my lab to which I have restricted access<br />
 1. 
 F_metad: This folder has the input scripts required to perform Metadynamics <br />
 1. 
