@@ -9,8 +9,14 @@ README: supporting data for 2021 manuscript PNAS Patil et. al. There are three f
 <p align="justify">
 F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics. Please give few days. The external drive that has files is in my lab to which I have restricted access<br />
 1. 
-F_metad: This folder has the input scripts required to perform Metadynamics <br />
-1. 
+F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS files <br />
+1. plumed.dat - a plumed script that needs to be run for performing Metadynamcs <br />
+2. active_wt_alk_CA_meta_min.pdb - the reference active structure, one of the two collective variables is RMSD from this structure <br />
+3. inactive_wt_alk_CA_meta_min.pdb - the reference inactive structure, one of the two collective variables is RMSD from this structure <br />
+4. HILLS  - We implement four walkers and hence have four HILLS files as output of metadynamics run which need to be read by sum_hills action of plumed that returns the free energy by summing of the gaussians that have been deposited <br />
+5. fes_650.dat - The free energy file which has free energy at every coordinate on CV space. The reason this is named _650.dat, since each walker runs 650 ns, so the aggregate time that we have is 2.6us (4 walkers) <br />
+
+PS note: Ofcourse, you would need the usual gromacs file:  .mdp file, .top file, .cpt file, .tpr file which are found in the F_unbiased folder <br />
 
 F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, and check convergence of metadynamics free energy zones  </br> 
 1.
