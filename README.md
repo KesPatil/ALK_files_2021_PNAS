@@ -37,8 +37,9 @@ Our MD and metadynamics simulations use charmm27.ff from GROMACS 5.0.7
 <p align="justify">
 The MD simulations are performed in GROMACS. The paper mentions Biophyscode which actually is a wrapper on Gromacs. Please feel free to try out Biophyscode, a creation from Radhakrishnan lab. https://biophyscode.github.io. Please note: Following is the walk-through on how to  run a simulation using Biophyscode:
 
-"https://biophyscode.github.io/molecular_dynamics_lab/"
+"https://biophyscode.github.io/molecular_dynamics_lab/". <br />
 
+All mutations are introduced using BioPhysCode Automacs routine based on MODELLER <br />
 
 All the requisite files needed to setup and run the simulations are  included in the F_unbiased. We followed Bevan Lab Tutorials: "Lysozyme in water" example for equilibration and production <br />
 http://www.mdtutorials.com/gmx/lysozyme/index.html
