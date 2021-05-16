@@ -7,8 +7,9 @@ README: supporting data for 2021 manuscript PNAS Patil et. al. There are three f
 
 ## Folders
 <p align="justify">
-F_unbiased: This folder has the input scripts required to perform Unbiased Molecular Dynamics. Please give few days. The external drive that has files is in my lab to which I have restricted access<br />
-1. 
+F_unbiased: This folder has the input gromacs .mdp scripts required to perform Unbiased Molecular Dynamics and the active and the inactive structures of ALK <br />
+1. The equilibration and production procedure is as mentioned in the SI <br />
+2. The outpus (.cpt, .top, .tpr) were inputs to Metadynamics. The active and inactive ALK structures at 101 ns of MD simulation were chosen as reference in the Metadynamics run. These structures are included in F_metad as  active_wt_alk_CA_meta_min.pdb and  inactive_wt_alk_CA_meta_min.pdb <br />
 F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS files <br />
 1. plumed.dat - a plumed script that needs to be run for performing Metadynamcs <br />
 2. active_wt_alk_CA_meta_min.pdb - the reference active structure, one of the two collective variables is RMSD from this structure <br />
