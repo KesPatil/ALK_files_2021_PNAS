@@ -39,7 +39,11 @@ The MD simulations are performed in GROMACS. The paper mentions Biophyscode whic
 
 "https://biophyscode.github.io/molecular_dynamics_lab/". <br />
 
-All mutations are introduced using BioPhysCode Automacs routine based on MODELLER <br />
+All mutations are introduced using BioPhysCode Automacs routine based on MODELLER. Please see MODELLER here: <br />
+
+https://salilab.org/modeller/ <br />
+
+
 
 All the requisite files needed to setup and run the simulations are  included in the F_unbiased. We followed Bevan Lab Tutorials: "Lysozyme in water" example for equilibration and production <br />
 http://www.mdtutorials.com/gmx/lysozyme/index.html
