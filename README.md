@@ -11,7 +11,7 @@ F_unbiased: This folder has the input gromacs .mdp scripts required to perform U
 1. The equilibration and production procedure is as mentioned in the SI <br />
 2. The outpus (.cpt, .top, .tpr) of the unbiased MD simualtion were inputs to Metadynamics. The active and inactive ALK structures at 101 ns of MD simulation were chosen as reference in the Metadynamics run. These structures are included in F_metad as  active_wt_alk_CA_meta_min.pdb and  inactive_wt_alk_CA_meta_min.pdb <br />
 
-F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS files <br />
+F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS and free energy files <br />
 1. plumed.dat - a plumed script that needs to be run for performing Metadynamcs <br />
 2. active_wt_alk_CA_meta_min.pdb - the reference active structure, one of the two collective variables is RMSD from this structure <br />
 3. inactive_wt_alk_CA_meta_min.pdb - the reference inactive structure, one of the two collective variables is RMSD from this structure <br />
