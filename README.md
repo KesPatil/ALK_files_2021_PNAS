@@ -24,7 +24,7 @@ PS note: Additionally, you would need the usual gromacs file:  .mdp file, .top f
 
 
 F_post_processing: This folder contain the python scripts used for post-processing trajectories data to calculate hydrogen bond occupancies, plot free energy landscapes, and check convergence of metadynamics free energy zones  </br> 
-1.
+
 </p>
 
 ## Forcefield implemented
