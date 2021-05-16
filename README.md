@@ -12,15 +12,15 @@ F_unbiased: This folder has the input gromacs .mdp scripts required to perform U
 2. The equilibration and production procedure is as mentioned in the SI <br />
 3. The outputs (.gro, .cpt, .top, .tpr) of the unbiased MD simualtion are inputs to Metadynamics. The active and inactive ALK structures at 101 ns of MD simulation were chosen as reference in the Metadynamics run. These structures are included in F_metad as  active_wt_alk_CA_meta_min.pdb and  inactive_wt_alk_CA_meta_min.pdb <br />
 
-F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS and free energy files <br />
+F_metad: This folder has the input scripts required to perform Metadynamics and also the output free energy file that is obtained by summing over HILLS files <br />
 1. plumed.dat - a plumed script that needs to be run for performing Metadynamcs <br />
 2. active_wt_alk_CA_meta_min.pdb - the reference active structure, one of the two collective variables is RMSD from this structure <br />
 3. inactive_wt_alk_CA_meta_min.pdb - the reference inactive structure, one of the two collective variables is RMSD from this structure <br />
 
 PS note: Additionally, you would need the usual gromacs file:  .mdp file, .top file, .cpt file, .tpr file which are the outputs of unbiased MD <br />
 
-4. HILLS  - We implement four walkers and hence have four HILLS files as output of metadynamics run which need to be read by sum_hills action of plumed that returns the free energy by summing of the gaussians that have been deposited <br />
-5. fes_650.dat - The free energy file which has free energy at every coordinate on CV space. The reason this is named fes_650.dat, since each walker runs 650 ns, so the aggregate time that we have is 2.6us (4 walkers) <br />
+
+4. fes_650.dat - The free energy file which has free energy at every coordinate on CV space obtained by summing over HILLS files. The reason this is named fes_650.dat, since each walker runs 650 ns, so the aggregate time that we have is 2.6us (4 walkers) <br />
 
 
 
