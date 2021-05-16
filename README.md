@@ -9,7 +9,7 @@ README: supporting data for 2021 manuscript PNAS Patil et. al. There are three f
 <p align="justify">
 F_unbiased: This folder has the input gromacs .mdp scripts required to perform Unbiased Molecular Dynamics and the active and the inactive structures of ALK <br />
 1. The equilibration and production procedure is as mentioned in the SI <br />
-2. The outpus (.cpt, .top, .tpr) of the unbiased MD simualtion were inputs to Metadynamics. The active and inactive ALK structures at 101 ns of MD simulation were chosen as reference in the Metadynamics run. These structures are included in F_metad as  active_wt_alk_CA_meta_min.pdb and  inactive_wt_alk_CA_meta_min.pdb <br />
+2. The outpus (.gro, .cpt, .top, .tpr) of the unbiased MD simualtion are inputs to Metadynamics. The active and inactive ALK structures at 101 ns of MD simulation were chosen as reference in the Metadynamics run. These structures are included in F_metad as  active_wt_alk_CA_meta_min.pdb and  inactive_wt_alk_CA_meta_min.pdb <br />
 
 F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS and free energy files <br />
 1. plumed.dat - a plumed script that needs to be run for performing Metadynamcs <br />
@@ -39,9 +39,8 @@ The MD simulations are performed in GROMACS. The paper mentions Biophyscode whic
 "https://biophyscode.github.io/molecular_dynamics_lab/"
 
 
-All the requisite files needed to run the simulations are  included in the F_unbiased. Submit the job to run the MD using the command: <br />
-
-gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+All the requisite files needed to setup and run the simulations are  included in the F_unbiased. We followed Bevan Lab Tutorials: "Lysozyme in water" example  <br />
+http://www.mdtutorials.com/gmx/lysozyme/index.html
 </p>
 
 ### 2. Enhanced sampling simulation of Metadynamics using PLUMED <br />
@@ -50,7 +49,7 @@ We patch GROMACS 5.0.7 with PLUMED 2.3.5 and use multiple walker (num_of_walkers
 </p>
 
 <p align="justify">
-In the folder F_metad we have the scripts required to run the metadynamics. Please note: Metadynamics has to be run using the output .gro and .cpt files of the unbiased MD  simulations. The folder containts the .mdp file, plumed.dat, topol.top, and .itp files <br />
+In the folder F_metad we have the scripts required to run the metadynamics. Please note: Metadynamics has to be run using the output .gro and .cpt files of the unbiased MD  simulations. The folder contains the .mdp file, plumed.dat and the reference active and inactive ALK alpha Carbons structure files <br />
 </p>
 
 <p align="justify">
