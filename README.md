@@ -10,12 +10,13 @@ README: supporting data for 2021 manuscript PNAS Patil et. al. There are three f
 F_unbiased: This folder has the input gromacs .mdp scripts required to perform Unbiased Molecular Dynamics and the active and the inactive structures of ALK <br />
 1. The equilibration and production procedure is as mentioned in the SI <br />
 2. The outpus (.cpt, .top, .tpr) were inputs to Metadynamics. The active and inactive ALK structures at 101 ns of MD simulation were chosen as reference in the Metadynamics run. These structures are included in F_metad as  active_wt_alk_CA_meta_min.pdb and  inactive_wt_alk_CA_meta_min.pdb <br />
+
 F_metad: This folder has the input scripts required to perform Metadynamics and also the output HILLS files <br />
 1. plumed.dat - a plumed script that needs to be run for performing Metadynamcs <br />
 2. active_wt_alk_CA_meta_min.pdb - the reference active structure, one of the two collective variables is RMSD from this structure <br />
 3. inactive_wt_alk_CA_meta_min.pdb - the reference inactive structure, one of the two collective variables is RMSD from this structure <br />
 4. HILLS  - We implement four walkers and hence have four HILLS files as output of metadynamics run which need to be read by sum_hills action of plumed that returns the free energy by summing of the gaussians that have been deposited <br />
-5. fes_650.dat - The free energy file which has free energy at every coordinate on CV space. The reason this is named _650.dat, since each walker runs 650 ns, so the aggregate time that we have is 2.6us (4 walkers) <br />
+5. fes_650.dat - The free energy file which has free energy at every coordinate on CV space. The reason this is named fes_650.dat, since each walker runs 650 ns, so the aggregate time that we have is 2.6us (4 walkers) <br />
 
 PS note: Ofcourse, you would need the usual gromacs file:  .mdp file, .top file, .cpt file, .tpr file which are found in the F_unbiased folder <br />
 
